@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import {Link, withRouter} from "react-router-dom";
 import styled from "styled-components";
 
 const Header = styled.header`
@@ -36,7 +36,7 @@ const SLink = styled(Link)`
   justify-content: center;
 `;
 
-export default withRouter(({ location: { pathname } }) => (
+export default withRouter(({location: {pathname}}) => (
   <Header>
     {console.log(pathname)}
     <List>

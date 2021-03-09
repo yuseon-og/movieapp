@@ -46,7 +46,7 @@ export default class extends React.Component {
 
   render() {
     const { topRated, popular, airingToday, loading, error } = this.state;
-    console.log(this.state);
+
     return (
       <TvPresenter
         topRated={topRated}

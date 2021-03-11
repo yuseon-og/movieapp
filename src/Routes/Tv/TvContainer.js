@@ -16,7 +16,7 @@ export default class extends React.Component {
       const {
         data: { results: topRated },
       } = await tvApi.topRated();
-      // console.log(topRated);
+      console.log(topRated);
 
       const {
         data: { results: popular },
@@ -35,7 +35,7 @@ export default class extends React.Component {
       });
     } catch {
       this.setState({
-        error: "Can't Find Any Information!!",
+        error: "Can't Find Any TV Shows Information!!",
       });
     } finally {
       this.setState({

@@ -8,7 +8,7 @@ export default class extends React.Component {
     upcoming: null,
     popular: null,
     error: null,
-    loading: null,
+    loading: true,
   };
 
   async componentDidMount() {

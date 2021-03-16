@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Loader from "../../Components/Loader";
 import Msg from "../../Components/Msg";
-import { Helmet } from "react-helmet";
+import {Helmet} from "react-helmet";
+import ReactPlayer from "react-player/youtube";
 
 const Container = styled.div`
   height: calc(100vh - 50px);
@@ -70,7 +71,11 @@ const Overview = styled.p`
   width: 50%;
 `;
 
-const DetailPresenter = ({ result, error, loading }) =>
+const VideoContainer = styled.div`
+  padding: 10px 0;
+`;
+
+const DetailPresenter = ({result, error, loading}) =>
   loading ? (
     <>
       <Helmet>
@@ -119,7 +124,34 @@ const DetailPresenter = ({ result, error, loading }) =>
                 )}
             </Item>
           </ItemContainer>
-          <Overview>{result.overview}</Overview>
+          <ItemContainer>
+            <Overview>{result.overview}</Overview>
+
+            {console.log(result)}
+
+            {/* 첫번째 비디오만 출력 */}
+            <VideoContainer>
+              {result.videos.results.length !== 0 ? (
+                <ReactPlayer
+                  url={`https://www.youtube.com/watch?v=${result.videos.results[0].key}`}
+                ></ReactPlayer>
+              ) : (
+                console.log("nope")
+              )}
+            </VideoContainer>
+
+            {/* 모든 비디오를 Map을 사용하여 출력 */}
+
+            <VideoContainer>
+              {result.videos.results.map((results) => (
+                <ReactPlayer
+                  url={`https://www.youtube.com/watch?v=${results.key}`}
+                >
+                  {console.log(results.key)}
+                </ReactPlayer>
+              ))}
+            </VideoContainer>
+          </ItemContainer>
         </Data>
       </Content>
     </Container>

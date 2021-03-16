@@ -1,4 +1,4 @@
-import { movieApi, tvApi } from "../../api";
+import {movieApi, tvApi} from "../../api";
 import React from "react";
 import DetailPresenter from "./DetailPresenter";
 
@@ -6,7 +6,7 @@ export default class extends React.Component {
   constructor(props) {
     super(props); // 부모 클래스가 가지고 있는 함수 사용할때
     const {
-      location: { pathname },
+      location: {pathname},
     } = props;
     this.state = {
       result: null,
@@ -21,11 +21,11 @@ export default class extends React.Component {
 
     const {
       match: {
-        params: { id },
+        params: {id},
       },
-      history: { push },
+      history: {push},
     } = this.props;
-    const { isMovie } = this.state;
+    const {isMovie} = this.state;
     const parseId = Number(id);
 
     if (isNaN(parseId)) {
@@ -67,7 +67,7 @@ export default class extends React.Component {
   render() {
     // console.log(this.props);
     // console.log(this.state);
-    const { result, loading, error } = this.state;
+    const {result, loading, error} = this.state;
     return <DetailPresenter result={result} loading={loading} error={error} />;
   }
 }

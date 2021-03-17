@@ -142,7 +142,7 @@ const DetailPresenter = ({result, error, loading}) =>
 
             {/* 모든 비디오를 Map을 사용하여 출력 */}
 
-            <VideoContainer>
+            {/* <VideoContainer>
               {result.videos.results.map((results) => (
                 <ReactPlayer
                   url={`https://www.youtube.com/watch?v=${results.key}`}
@@ -150,7 +150,7 @@ const DetailPresenter = ({result, error, loading}) =>
                   {console.log(results.key)}
                 </ReactPlayer>
               ))}
-            </VideoContainer>
+            </VideoContainer> */}
           </ItemContainer>
         </Data>
       </Content>

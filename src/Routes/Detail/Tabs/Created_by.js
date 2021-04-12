@@ -43,7 +43,7 @@ const Alert = styled.div`
 `;
 
 const Created_by = ({ props }) => {
-  console.log(props.created_by);
+  // console.log(props.created_by);
   return (
     <Container>
       {props.created_by.length !== 0 ? (

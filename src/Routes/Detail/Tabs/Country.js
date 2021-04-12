@@ -43,7 +43,7 @@ const Alert = styled.div`
 `;
 
 const Country = ({ props }) => {
-  console.log(props);
+  // console.log(props);
   return (
     <Container>
       {props.production_countries.length !== 0 ? (

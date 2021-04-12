@@ -109,7 +109,7 @@ const Poster = withRouter(
                 imageUrl ? `https://image.tmdb.org/t/p/w300${imageUrl}` : NoImg
               }
             />
-            {console.log(location)}
+            {/* {console.log(location)} */}
             {/* {console.log(history)} */}
             <Rating>
               <span role="img" aria-label="rating">

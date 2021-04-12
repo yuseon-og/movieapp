@@ -42,7 +42,7 @@ const Alert = styled.div`
 `;
 
 const seasonss = ({ props }) => {
-  console.log(props.seasons);
+  // console.log(props.seasons);
   return (
     <Container>
       {props.seasons.length !== 0 ? (

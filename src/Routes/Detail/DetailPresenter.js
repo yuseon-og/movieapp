@@ -105,7 +105,9 @@ const VideoContainer = styled.div`
 `;
 
 const ALink = styled.a`
-  background-color: #feca57;
+  /* background-color: #feca57; */
+  background-color: ${(props) => (props.imdb !== null ? "#feca57" : "#d2dae2")};
+  /* {console.log(props.result)} */
   padding: 3px;
   font-size: 10px;
   font-weight: 700;
@@ -164,15 +166,17 @@ const DetailPresenter = withRouter(
               </Item>
               <Divider>•</Divider>
               <Item>
-                <ALink href={"https://imdb.com/title/" + result.imdb_id}>
+                {console.log(result.imdb_id)}
+                <ALink
+                  href={"https://imdb.com/title/" + result.imdb_id}
+                  imdb={result.imdb_id !== undefined ? result.imdb_id : null}
+                >
                   IMDB
                 </ALink>
               </Item>
             </ItemContainer>
             <ItemContainer>
               <Overview>{result.overview}</Overview>
-
-              {/* {console.log(result)} */}
 
               {result.title ? (
                 <InsideMenu>

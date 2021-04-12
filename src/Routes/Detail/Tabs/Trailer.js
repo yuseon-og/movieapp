@@ -28,7 +28,7 @@ const Alert = styled.div`
 `;
 
 const Trailer = ({ props }) => {
-  console.log(props);
+  // console.log(props);
   return (
     <Container>
       <VideoContainer>

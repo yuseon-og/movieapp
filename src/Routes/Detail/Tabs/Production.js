@@ -42,7 +42,7 @@ const Alert = styled.div`
 `;
 
 const Production = ({ props }) => {
-  console.log(props.production_companies);
+  // console.log(props.production_companies);
   return (
     <Container>
       {props.production_companies.length !== 0 ? (

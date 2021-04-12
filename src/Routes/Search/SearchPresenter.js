@@ -87,7 +87,7 @@ const SearchPresenter = ({
               tvResults &&
               movieResults.length === 0 &&
               tvResults.length === 0 && (
-                <Msg color="#00d2d3" text="Nothing Found" />
+                <Msg color="#3498db" text="Nothing Found" />
               )}
           </>
         )}

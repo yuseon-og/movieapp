@@ -18,6 +18,9 @@ export const movieApi = {
         append_to_response: "videos",
       },
     }),
+
+  movieCollection: (id) => api.get(`collection/${id}`),
+
   search: (term) =>
     api.get("search/movie", {
       // params: encodeURIComponent(term),
@@ -37,6 +40,7 @@ export const tvApi = {
         append_to_response: "videos",
       },
     }),
+
   search: (term) =>
     api.get("search/tv", {
       // params: encodeURIComponent(term),

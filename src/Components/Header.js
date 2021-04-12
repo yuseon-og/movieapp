@@ -36,10 +36,23 @@ const SLink = styled(Link)`
   justify-content: center;
 `;
 
+const Image = styled.div`
+  background-image: url("/logo.png");
+  width: 140px;
+  height: 50px;
+  background-size: cover;
+  padding: 20px;
+  margin-right: 15px;
+  background-position: center center;
+`;
+
 export default withRouter(({ location: { pathname } }) => (
   <Header>
     {/* {console.log(pathname)} */}
     <List>
+      <Image>
+        <SLink to="/"></SLink>
+      </Image>
       <Item current={pathname === "/"}>
         <SLink to="/">Movies</SLink>
       </Item>

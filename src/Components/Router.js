@@ -10,22 +10,30 @@ import Search from "../Routes/Search/SearchContainer";
 import Tv from "../Routes/Tv/TvContainer";
 import Header from "./Header";
 import Detail from "../Routes/Detail/DetailContainer";
+import Section from "./Section";
 
-export default () => (
-  <Router>
-    <>
-      <Header />
-      <Switch>
-        <Route path="/" exact component={Home}></Route>
-        <Route path="/tv" component={Tv}></Route>
-        <Route path="/search" component={Search}></Route>
-        <Route path="/movie/:id" component={Detail} />
-        <Route path="/show/:id" component={Detail} />
-        <Redirect from="*" to="/" />
-      </Switch>
-    </>
-  </Router>
-);
+export default () => {
+  // const remount = () => {
+  //   window.location.reload(true);
+  // };
+  return (
+    <Router>
+      <>
+        <Header />
+        <Switch>
+          <Route path="/" exact component={Home}></Route>
+          <Route path="/tv" component={Tv}></Route>
+          <Route path="/search" component={Search}></Route>
+          <Route path="/movie/:id" component={Detail} />
+          {/* <Route path="/movie/:id" render={() => <Detail />} /> */}
+          <Route path="/show/:id" component={Detail} />
+
+          <Redirect from="*" to="/" />
+        </Switch>
+      </>
+    </Router>
+  );
+};
 
 // /movie/id14
 // /show/id14
